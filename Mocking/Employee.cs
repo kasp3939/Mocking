@@ -20,7 +20,7 @@ namespace Mocking
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            database.Clear();
         }
 
         public int CountEmployees()

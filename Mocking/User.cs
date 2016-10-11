@@ -28,7 +28,7 @@ namespace Mocking
             throw new NotImplementedException();
         }
 
-        internal void EditEmployeeName(string name, string v)
+        public void EditEmployeeName(string name, string v)
         {
             throw new NotImplementedException();
         }

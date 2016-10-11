@@ -11,6 +11,8 @@ namespace Mocking
         public string Type { get; internal set; }
         public int Wage { get; internal set; }
 
+        Dictionary<long, Employee> database = new Dictionary<long, Employee>();
+
         public double CalculateWeeklySalary(int hours, int wage)
         {
             return hours * wage;
@@ -38,7 +40,8 @@ namespace Mocking
 
         public Employee LoadEmployee(int id)
         {
-            throw new NotImplementedException();
+            if (database.ContainsKey(id)) return database[id];
+            else return null;
         }
 
         public void SaveEmployee(Employee employee)

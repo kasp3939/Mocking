@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Mocking
 {
-    public class Employee
+    public class Employee : IEmployeeRepository
     {
         public int Id { get; internal set; }
         public MailBox MailBox { get; internal set; }
@@ -13,6 +14,36 @@ namespace Mocking
         public double CalculateWeeklySalary(int hours, int wage)
         {
             return hours * wage;
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int CountEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Employee CreateEmployee(string name, string type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Employee> FindAllEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Employee LoadEmployee(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveEmployee(Employee employee)
+        {
+            throw new NotImplementedException();
         }
     }
 }

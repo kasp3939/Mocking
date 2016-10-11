@@ -33,9 +33,9 @@ namespace Mocking
             //Arrange
             var nonAdmin = new User() { UserName = "alhe@eal.dk", Password = "1234qwER" };
 
-            var mockLogin = new Mock<ILoginModule>();
+            var mockLogin = new Mock<ILoginModule>(); 
             mockLogin.Setup(x => x.Login(nonAdmin))
-                .Callback(() => nonAdmin.Rights = Rights.None);
+                .Callback(() => nonAdmin.Rights = Rights.None); 
 
             //Act
             mockLogin.Object.Login(nonAdmin);
@@ -139,34 +139,34 @@ namespace Mocking
 
 
 
-        [TestMethod]
-        public void CanCalulateAverageWeeklySaleryPerEmployee()
-        {
-            //implement your own logic
-            //use mocks
-            throw new NotImplementedException();
-        }
+        //[TestMethod]
+        //public void CanCalulateAverageWeeklySaleryPerEmployee()
+        //{
+        //    //implement your own logic
+        //    //use mocks
+        //    throw new NotImplementedException();
+        //}
 
 
-        [TestMethod]
-        public void AfterMailSentNumMessagesCreatedHasBeenIncrementedByOne()
-        {
-            //Arrange
-            var admin = new User() { UserName = "sist@eal.dk", Password = "!QAZ2wsx", NumMessagesCreated = 0 };
-            var message = new Mail() { Content = "Hello Mom! Hope you are doing well" };
-            var mock = new Mock<IEmployeeRepository>();
-            mock.Setup(m => m.LoadEmployee(1)).Returns(() => new Employee() { Id = 1, Name = "Karen", Type = "Mom", Wage = 20 });
-            Employee e = mock.Object.LoadEmployee(1);
+        //[TestMethod]
+        //public void AfterMailSentNumMessagesCreatedHasBeenIncrementedByOne()
+        //{
+        //    //Arrange
+        //    var admin = new User() { UserName = "sist@eal.dk", Password = "!QAZ2wsx", NumMessagesCreated = 0 };
+        //    var message = new Mail() { Content = "Hello Mom! Hope you are doing well" };
+        //    var mock = new Mock<IEmployeeRepository>();
+        //    mock.Setup(m => m.LoadEmployee(1)).Returns(() => new Employee() { Id = 1, Name = "Karen", Type = "Mom", Wage = 20 });
+        //    Employee e = mock.Object.LoadEmployee(1);
 
-            var mockMail = new Mock<IMailModule>();
-            mockMail.Setup(x => x.SendMail(message, e)).Callback(() => admin.NumMessagesCreated = 1);
+        //    var mockMail = new Mock<IMailModule>();
+        //    mockMail.Setup(x => x.SendMail(message, e)).Callback(() => admin.NumMessagesCreated = 1);
 
-            //Act
-            mockMail.Object.SendMail(message, e);
+        //    //Act
+        //    mockMail.Object.SendMail(message, e);
 
-            //Assert
-            Assert.AreEqual(1, admin.NumMessagesCreated);
-        }
+        //    //Assert
+        //    Assert.AreEqual(1, admin.NumMessagesCreated);
+        //}
 
         //[TestMethod]
         //public void AfterLoginAdminCanEditEmployeeName()
@@ -190,7 +190,7 @@ namespace Mocking
         //    Assert.AreEqual("Simon", e.Name);
         //}
 
-       // [TestMethod]
+        // [TestMethod]
         //public void AfterLoginAdminCanEditEmployeeWage()
         //{
         //    //Arrange
@@ -211,41 +211,41 @@ namespace Mocking
         //    //Assert
         //    Assert.AreEqual("Simon", e.Name);
         //}
-        [TestMethod]
-        public void DoYourOwnLogic1()
-        {
-            //implement your idea and own logic
-            //use mocks
-            throw new NotImplementedException();
-        }
-        [TestMethod]
-        public void DoYourOwnLogic2()
-        {
-            //implement your idea and own logic
-            //use mocks
-            throw new NotImplementedException();
-        }
-        [TestMethod]
-        public void DoYourOwnLogic3()
-        {
-            //implement your idea and own logic
-            //use mocks
-            throw new NotImplementedException();
-        }
+        //[TestMethod]
+        //public void DoYourOwnLogic1()
+        //{
+        //    implement your idea and own logic
+        //        use mocks
+        //        throw new NotImplementedException();
+        //}
+        //[TestMethod]
+        //public void DoYourOwnLogic2()
+        //{
+        //    implement your idea and own logic
+        //        use mocks
+        //        throw new NotImplementedException();
+        //}
+        //[TestMethod]
+        //public void DoYourOwnLogic3()
+        //{
+        //    implement your idea and own logic
+        //        use mocks
+        //        throw new NotImplementedException();
+        //}
 
-        [TestMethod]
-        public void DoYourOwnLogic4()
-        {
-            //implement your idea and own logic
-            //use mocks
-            throw new NotImplementedException();
-        }
-        [TestMethod]
-        public void DoYourOwnLogic5()
-        {
-            //implement your idea and own logic
-            //use mocks
-            throw new NotImplementedException();
-        }
+        //[TestMethod]
+        //public void DoYourOwnLogic4()
+        //{
+        //    implement your idea and own logic
+        //        use mocks
+        //        throw new NotImplementedException();
+        //}
+        //[TestMethod]
+        //public void DoYourOwnLogic5()
+        //{
+        //    implement your idea and own logic
+        //        use mocks
+        //        throw new NotImplementedException();
+        //}
     }
 }

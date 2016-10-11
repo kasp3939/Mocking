@@ -1,6 +1,6 @@
 ﻿namespace Mocking
 {
-    internal class Mail
+    public class Mail
     {
         public Mail()
         {

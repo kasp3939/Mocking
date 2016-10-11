@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Mocking
 {
-    internal class MailBox
+    public class MailBox : IMailModule
     {
         public MailBox()
         {
@@ -10,7 +11,7 @@ namespace Mocking
 
         public int NumReceivedMessages { get; set; }
 
-        internal void Add(System.Net.Mail o)
+        internal void Add(Mail o)
         {
             throw new NotImplementedException();
         }
@@ -20,7 +21,39 @@ namespace Mocking
             throw new NotImplementedException();
         }
 
-        internal void Add(Mail o)
+     
+
+        public void SendMail(Mail mail, Employee employee)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Mail GetEmailById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddToDraft(Mail mail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddToSentMessages(Mail mail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddToSentSpam(Mail mail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Mail> GetAllMail()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SendMailE(Mail message, Employee e)
         {
             throw new NotImplementedException();
         }

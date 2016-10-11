@@ -14,6 +14,6 @@ namespace Mocking
         void AddToSentMessages(Mail mail);
         void AddToSentSpam(Mail mail);
         List<Mail> GetAllMail();
-        void SendMail(Mail message, Employee e);
+        void SendMailE(Mail message, Employee e);
     }
 }
